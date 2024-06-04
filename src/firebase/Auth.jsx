@@ -1,5 +1,5 @@
 import { auth, firebase } from "../config/firebase.js";
-import Firestore from "./Firestore.js";
+import Firestore from "./Firestore.jsx";
 
 /**
  * Class representing authentication functionalities.
