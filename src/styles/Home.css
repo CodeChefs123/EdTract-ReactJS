@@ -1,0 +1,40 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center / cover;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.home-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #333;
+    color: #fff;
+}

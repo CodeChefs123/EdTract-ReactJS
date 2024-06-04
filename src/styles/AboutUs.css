@@ -1,0 +1,30 @@
+/* AboutUs.css */
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-us-content {
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+.about-us-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.about-us-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-us-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

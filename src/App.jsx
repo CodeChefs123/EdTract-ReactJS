@@ -1,8 +1,10 @@
+import { Route, Routes } from "react-router-dom";
+import { HomeRoutes } from "./routes/HomeRoutes";
 function App() {
   return (
-    <>
-      <h1> EdTract! </h1>
-    </>
+    <Routes>
+      <Route path="/*" element={<HomeRoutes />} />
+    </Routes>
   );
 }
 
