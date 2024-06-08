@@ -1,5 +1,8 @@
+import React from "react";
 import { useState } from "react";
 import "../../styles/ContactUs.css";
+import FirestoreService from "../../firebase/Firestore";
+import { Navigate } from "react-router-dom";
 
 function ContactUs() {
   const [email, setEmail] = useState("");
@@ -7,7 +10,16 @@ function ContactUs() {
   const [message, setMessage] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, name, message);
+    const data = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    const firestoreInstance = new FirestoreService("contact", NaN, []);
+    firestoreInstance.create(data);
+    // eslint-disable-next-line no-unused-expressions
+    setEmail(""), setName(""), setMessage("");
+    return <Navigate to="/" />;
   };
   return (
     <div className="contact-container">

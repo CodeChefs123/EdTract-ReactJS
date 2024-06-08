@@ -19,5 +19,3 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_EDTRACT_C8C09 }}
           projectId: edtract-c8c09
-        env:
-          FIREBASE_CLI_EXPERIMENTS: webframeworks

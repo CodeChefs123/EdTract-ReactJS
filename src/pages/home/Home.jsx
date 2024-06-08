@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/Home.css"; // Importing our custom CSS for styling
 
 export default function Home() {

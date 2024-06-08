@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Home from "../pages/home/Home";
@@ -14,8 +15,8 @@ export function HomeRoutes() {
         <Route index element={<Home />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="contact" element={<ContactUs />} />
-        <Route path="sign/up" element={<SignUp />} />
-        <Route path="sign/in" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="login" element={<Login />} />
       </Routes>
     </>
   );

@@ -5,8 +5,14 @@ import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import userReducer from "./features/user";
+import alterReducer from "./features/alerts";
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    user: userReducer,
+    alerts: alterReducer,
+  },
 });
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,3 +23,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </Provider>
   </React.StrictMode>
 );
+
+reportWebVitals(console.log);

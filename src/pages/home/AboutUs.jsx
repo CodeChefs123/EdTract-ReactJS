@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/AboutUs.css"; // Importing our custom CSS for styling
 
 function AboutUs() {
