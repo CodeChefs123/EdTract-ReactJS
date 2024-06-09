@@ -7,6 +7,9 @@
 .footer h5 {
     color: #f8f9fa;
     margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .footer ul {
@@ -18,6 +21,17 @@
     margin-bottom: 10px;
 }
 
+.footer .footer-link {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .footer-link:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
 .footer .social-icons {
     display: flex;
     justify-content: space-around;
@@ -27,11 +41,12 @@
 .footer .social-icon {
     color: #f8f9fa;
     font-size: 20px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer .social-icon:hover {
     color: #007bff;
+    transform: scale(1.2);
 }
 
 .footer p {
