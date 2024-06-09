@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/AboutUs.css"; // Importing our custom CSS for styling
+import "../../styles/pages/AboutUs.css"; // Importing our custom CSS for styling
 
 function AboutUs() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../features/alerts";
-import "../styles/Alert.css"; // Importing custom CSS for additional styling
+import "../styles/components/Alert.css"; // Importing custom CSS for additional styling
 
 const Alert = () => {
   const flashedMessages = useSelector((state) => state.alerts.values);

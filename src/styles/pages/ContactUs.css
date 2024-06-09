@@ -1,0 +1,34 @@
+/* ContactUs.css */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f7f7f7;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+}
+
+.contact-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #666;
+}
