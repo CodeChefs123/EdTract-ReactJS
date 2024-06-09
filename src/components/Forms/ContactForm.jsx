@@ -35,7 +35,7 @@ const ContactForm = ({ onSubmit }) => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         required
-      ></textarea>
+       />
       <button type="submit">Send Message</button>
     </form>
   );
