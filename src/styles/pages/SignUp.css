@@ -1,0 +1,32 @@
+/* src/styles/SignUp.css */
+
+.signup-page-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-heading h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+}
+

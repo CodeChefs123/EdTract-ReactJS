@@ -1,0 +1,23 @@
+/* Login.css */
+
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.login-heading {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333333;
+}
+

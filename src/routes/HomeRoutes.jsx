@@ -6,6 +6,7 @@ import AboutUs from "../pages/home/AboutUs";
 import ContactUs from "../pages/home/ContactUs";
 import SignUp from "../pages/home/SignUp";
 import Login from "../pages/home/Login";
+import Footer from "../components/Footer";
 
 export function HomeRoutes() {
   return (
@@ -18,6 +19,7 @@ export function HomeRoutes() {
         <Route path="signup" element={<SignUp />} />
         <Route path="login" element={<Login />} />
       </Routes>
+      <Footer />
     </>
   );
 }
