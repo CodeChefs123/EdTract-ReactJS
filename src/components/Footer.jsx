@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -16,17 +17,31 @@ export default function Footer() {
           <Col md={4}>
             <h5>Company</h5>
             <ul className="list-unstyled">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact Us</li>
+              <li>
+                <Link to="/about" className="footer-link">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </Col>
           <Col md={4}>
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li>Home</li>
-              <li>Services</li>
-              <li>Blog</li>
+              <li>
+                <Link to="/" className="footer-link">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/signup" className="footer-link">
+                  Sign Up
+                </Link>
+              </li>
             </ul>
           </Col>
           <Col md={4}>
