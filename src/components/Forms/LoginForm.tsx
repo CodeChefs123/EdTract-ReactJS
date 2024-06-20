@@ -4,7 +4,7 @@ import "../../styles/components/Forms/LoginForm.css";
 export default function LoginForm({
   handleEmailAndPasswordSubmit,
   handleGoogleSubmit,
-}) {
+}: any) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (

@@ -1,16 +1,21 @@
 import React from "react";
-import "../../styles/pages/Login.css";
-import FirebaseAuthentication from "../../firebase/Auth.js";
+import "../../styles/pages/SignUp.css";
+import FirebaseAuthentication from "../../firebase/Auth";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/user";
 import { Navigate } from "react-router-dom";
-import LoginForm from "../../components/Forms/LoginForm.jsx";
+import SignUpForm from "../../components/Forms/SignUpForm";
 
-export default function Login() {
+export default function SignUp() {
   const dispatch = useDispatch();
-  const handleEmailAndPasswordSubmit = ({ email, password }) => {
+  const handleEmailandPasswordSubmit = async ({
+    email,
+    name,
+    password,
+  }: any) => {
     const authInstance = new FirebaseAuthentication();
-    const [_, uid] = authInstance.signIn(email, password);
+    // eslint-disable-next-line
+    const [_, uid] = await authInstance.register(email, password, name);
     dispatch(login({ uid }));
     return <Navigate to="/user" />;
   };
@@ -23,17 +28,17 @@ export default function Login() {
       return <Navigate to="/user" />;
     } else {
       console.error("Error:", result[1]);
+      // Handle error condition here
     }
   };
-
   return (
-    <div className="login-page-container">
-      <div className="login-container">
-        <div className="login-heading">
-          <h1>Login</h1>
+    <div className="signup-page-container">
+      <div className="signup-container">
+        <div className="signup-heading">
+          <h1>Sign Up</h1>
         </div>
-        <LoginForm
-          handleEmailAndPasswordSubmit={handleEmailAndPasswordSubmit}
+        <SignUpForm
+          handleEmailandPasswordSubmit={handleEmailandPasswordSubmit}
           handleGoogleSubmit={handleGoogleSubmit}
         />
       </div>

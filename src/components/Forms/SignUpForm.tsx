@@ -4,7 +4,7 @@ import "../../styles/components/Forms/SignUpForm.css";
 export default function SignUpForm({
   handleEmailandPasswordSubmit,
   handleGoogleSubmit,
-}) {
+}: any) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

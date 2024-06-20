@@ -9,7 +9,6 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../config/firebase";
-
 /**
  * FirebaseAuthentication class for performing authentication operations.
  */
@@ -20,7 +19,7 @@ export default class FirebaseAuthentication {
    * @param {string} password - The password of the user.
    * @returns {[boolean, string]} - An array indicating success (true/false) and the user ID or error message.
    */
-  async register(email, password, name) {
+  async register(email: any, password: any, name: any) {
     try {
       // Create user with email and password
       const userCredential = await createUserWithEmailAndPassword(
@@ -36,7 +35,7 @@ export default class FirebaseAuthentication {
 
       // Return success status and user ID
       return [true, userCredential.user.uid];
-    } catch (error) {
+    } catch (error: any) {
       // Return error message
       return [false, error.message];
     }
@@ -47,7 +46,7 @@ export default class FirebaseAuthentication {
    * @param {string} password - The password of the user.
    * @returns {[boolean, string]} - An array indicating success (true/false) and the user ID or error message.
    */
-  async signIn(email, password) {
+  async signIn(email: any, password: any) {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
@@ -55,7 +54,7 @@ export default class FirebaseAuthentication {
         password
       );
       return [true, userCredential.user.uid];
-    } catch (error) {
+    } catch (error: any) {
       return [false, error.message];
     }
   }
@@ -68,7 +67,7 @@ export default class FirebaseAuthentication {
     try {
       await signOut(auth);
       return [true, NaN];
-    } catch (error) {
+    } catch (error: any) {
       return [false, error.message];
     }
   }
@@ -78,11 +77,11 @@ export default class FirebaseAuthentication {
    * @param {string} email - The email address of the user.
    * @returns {[boolean, NaN]} - An array indicating success (true/false) and NaN (no data returned).
    */
-  async resetPassword(email) {
+  async resetPassword(email: any) {
     try {
       await sendPasswordResetEmail(auth, email);
       return [true, NaN];
-    } catch (error) {
+    } catch (error: any) {
       return [false, error.message];
     }
   }
@@ -92,7 +91,7 @@ export default class FirebaseAuthentication {
    * @param {string} newPassword - The new password for the user.
    * @returns {[boolean, NaN]} - An array indicating success (true/false) and NaN (no data returned).
    */
-  async updatePassword(newPassword) {
+  async updatePassword(newPassword: any) {
     try {
       const user = auth.currentUser;
       if (user) {
@@ -101,7 +100,7 @@ export default class FirebaseAuthentication {
       } else {
         return [false, "No user is signed in"];
       }
-    } catch (error) {
+    } catch (error: any) {
       return [false, error.message];
     }
   }
@@ -115,7 +114,7 @@ export default class FirebaseAuthentication {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
       return [true, result.user.uid];
-    } catch (error) {
+    } catch (error: any) {
       return [false, error.message];
     }
   }

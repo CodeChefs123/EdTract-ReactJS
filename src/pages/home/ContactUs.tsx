@@ -4,13 +4,13 @@ import FirestoreService from "../../firebase/Firestore";
 import { Navigate } from "react-router-dom";
 import ContactForm from "../../components/Forms/ContactForm";
 function ContactUs() {
-  const handleSubmit = ({ name, email, message }) => {
+  const handleSubmit = ({ name, email, message }: any) => {
     const data = {
       name: name,
       email: email,
       message: message,
     };
-    const firestoreInstance = new FirestoreService("contact", NaN, []);
+    const firestoreInstance = new FirestoreService("contact", null, []);
     firestoreInstance.create(data);
     return <Navigate to="/" />;
   };

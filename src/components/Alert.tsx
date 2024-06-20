@@ -2,14 +2,17 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../features/alerts";
 import "../styles/components/Alert.css"; // Importing custom CSS for additional styling
-
+type messageMap = {
+  category: string;
+  message: string;
+};
 const Alert = () => {
-  const flashedMessages = useSelector((state) => state.alerts.values);
+  const flashedMessages = useSelector((state: any) => state.alerts.values);
   const dispatch = useDispatch();
 
   return (
     <div className="alerts-container">
-      {flashedMessages.map(({ category, message }, index) => (
+      {flashedMessages.map(({ category, message }: messageMap, index: any) => (
         <div
           key={index}
           className={`alert alert-${category} alert-dismissible fade show custom-alert`}
