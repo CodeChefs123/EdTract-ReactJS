@@ -4,7 +4,7 @@
  * @param {Object} queryDict - Dictionary containing query fields and their corresponding values.
  * @returns {Promise<string|Error>} - Returns a promise that resolves to the document ID if found, otherwise an error message.
  */
-const getDocumentIdByContent = async (collection, queryDict) => {
+const getDocumentIdByContent = async (collection: any, queryDict: any) => {
   try {
     // Construct the query based on the provided query dictionary
     const query = Object.keys(queryDict).reduce(
@@ -22,7 +22,7 @@ const getDocumentIdByContent = async (collection, queryDict) => {
 
     // Retrieve the document ID from the query result
     return querySnapshot.docs[0].id;
-  } catch (error) {
+  } catch (error: any) {
     // Return the error message
     return error.message;
   }

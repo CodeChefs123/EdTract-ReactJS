@@ -1,20 +1,18 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import "../styles/components/Footer.css";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <Container>
-        <Row>
-          <Col md={4}>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
             <h5>Company</h5>
             <ul className="list-unstyled">
               <li>
@@ -28,8 +26,8 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </Col>
-          <Col md={4}>
+          </div>
+          <div className="col-md-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
               <li>
@@ -43,8 +41,8 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </Col>
-          <Col md={4}>
+          </div>
+          <div className="col-md-4">
             <h5>Follow Us</h5>
             <div className="social-icons">
               <a href="#" className="social-icon">
@@ -60,14 +58,14 @@ export default function Footer() {
                 <FaLinkedinIn />
               </a>
             </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="text-center mt-4">
+          </div>
+        </div>
+        <div className="row">
+          <div className="col text-center mt-4">
             <p>&copy; 2024 Your Company. All rights reserved.</p>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
